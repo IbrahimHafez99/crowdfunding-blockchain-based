@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "juanblanco.solidity",
+    "remixproject.ethereum-remix",
+    "trufflesuite-csi.truffle-vscode"
+  ]
+}

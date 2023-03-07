@@ -1,0 +1,98 @@
+{
+  "name": "crowdfund-contract",
+  "version": "1.0.0",
+  "description": "Campaign smart contract based on Ethereum network",
+  "keywords": [
+    "smart-contract",
+    "ethereum",
+    "solidity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/amy-spu/crowdfund/crowdfund-contract"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/amy-spu/crowdfund/crowdfund-contract/issues"
+  },
+  "engines": {
+    "node": "^14.20.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "node compile.js",
+    "prod": "node deploy.js",
+    "test": "mocha",
+    "lint": "prettier --write 'contracts/**/*.sol' & solhint 'contracts/**/*.sol'"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.1",
+    "dotenv": "^16.0.3",
+    "solc": "0.8.15",
+    "web3": "^1.8.1"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-solidity": "^1.0.0",
+    "solhint": "^3.3.7",
+    "solhint-plugin-prettier": "0.0.5"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "embeddedLanguageFormatting": "auto",
+    "editorconfig": true,
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxSingleQuote": true,
+    "proseWrap": "preserve",
+    "quoteProps": "consistent",
+    "requirePragma": false,
+    "semi": true,
+    "singleAttributePerLine": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false,
+    "printWidth": 80,
+    "overrides": [
+      {
+        "files": "*.sol",
+        "options": {
+          "tabWidth": 4,
+          "printWidth": 80,
+          "singleQuote": false,
+          "useTabs": true
+        }
+      }
+    ]
+  },
+  "solhint": {
+    "extends": "solhint:recommended",
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "ordering": "warn",
+      "constructor-syntax": "warn",
+      "compiler-version": [
+        "error",
+        "^0.8.15"
+      ],
+      "code-complexity": [
+        "error",
+        7
+      ],
+      "reason-string": "warn",
+      "func-visibility": [
+        "warn",
+        {
+          "ignoreConstructors": true
+        }
+      ]
+    }
+  }
+}

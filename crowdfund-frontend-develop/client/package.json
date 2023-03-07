@@ -1,0 +1,37 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next  dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "next build && next export && npx thirdweb@latest upload out"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.2",
+    "@thirdweb-dev/react": "^3",
+    "@thirdweb-dev/sdk": "^3",
+    "axios": "^1.2.2",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.6.8",
+    "formik": "^2.2.9",
+    "js-cookie": "^3.0.1",
+    "next": "^13",
+    "react": "^18.2",
+    "react-dom": "^18.2",
+    "sweetalert2": "^11.6.16",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "eslint": "8.11.0",
+    "eslint-config-next": "^13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  }
+}
